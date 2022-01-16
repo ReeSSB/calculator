@@ -1,0 +1,124 @@
+html {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: whitesmoke;
+  background: linear-gradient(to right, #73b0ca, #d3a663, #8166b4);
+}
+
+.calculator {
+  background: white;
+  width: 410px;
+  height:450px;
+  box-shadow: 0 5px 30px -5px rgba(0, 0, 0, 0.6);
+
+  border-radius: 16px;
+  backdrop-filter: blur(18px);
+  background-color: rgba(87,168,132, 0.366);
+  box-shadow: rgba(0, 0, 0, 0.3) 2px 8px 8px;
+  border: 2px rgba(255,255,255,0.4) solid;
+  border-bottom: 1px rgba(40,40,40,0.35) solid;
+  border-right: 2px rgba(40,40,40,0.35) solid;
+}
+
+/* Display */
+.calculator-display {
+  background: rgb(56, 55, 55);
+  color: rgb(216, 126, 126);
+  margin: 0;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  border-radius: 16px 16px 2px 2px;
+  max-width: 100%;
+}
+
+.calculator-display h1 {
+  margin: 0;
+  padding: 25px;
+  font-size: 45px;
+  font-family: "Lucida Console", sans-serif;
+  font-weight: 100;
+  overflow-x: auto;
+}
+
+/* Custom Scrollbar */
+::-webkit-scrollbar {
+  width: 5px;
+}
+
+::-webkit-scrollbar-track {
+  background: #f1f1f1;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #888;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #555;
+}
+
+/* Buttons */
+.calculator-buttons {
+  display: grid;
+  grid-gap: 10px;
+  grid-template-columns: repeat(4, 1fr);
+  padding: 10px;
+}
+
+button {
+  min-height: 50px;
+  font-size: 20px;
+  font-weight: 100;
+  border: none;
+  background: rgba(121, 26, 230, 0.3);
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+button:hover {
+  filter: brightness(60%);
+}
+
+button:active {
+  transform: translateY(1px);
+}
+
+button:focus {
+  outline: none;
+}
+
+.operator {
+  background: grey;
+  color: white;
+  font-size: 30px;
+}
+
+.clear {
+  background: rgb(255, 40, 40);
+  color: white;
+}
+
+.clear:hover {
+  filter: brightness(60%);
+}
+
+.equal-sign {
+  grid-column: -2;
+  grid-row: 2 / span 4;
+  background: rgb(56, 31, 56);
+}
+
+/* Media Query: Large Smartphone (Vertical) */
+@media screen and (max-width: 600px) {
+  .calculator {
+    width: 95%;
+  }
+}
